@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/chess-game/static/css/main.93f94f53.css",
+    "main.js": "/chess-game/static/js/main.21f79849.js",
+    "static/media/queen-white.svg": "/chess-game/static/media/queen-white.7903db3810d6e334263b.svg",
+    "static/media/queen-black.svg": "/chess-game/static/media/queen-black.c9756edc9554954911e7.svg",
+    "static/media/bishop-white.svg": "/chess-game/static/media/bishop-white.d86bf0389b617a359561.svg",
+    "static/media/king-white.svg": "/chess-game/static/media/king-white.939c34c5eb0ad2285b38.svg",
+    "static/media/knight-white.svg": "/chess-game/static/media/knight-white.8f43021ff92377c0a947.svg",
+    "static/media/king-black.svg": "/chess-game/static/media/king-black.a120259a75062494ca19.svg",
+    "static/media/bishop-black.svg": "/chess-game/static/media/bishop-black.9e38239472a53bcdd0ff.svg",
+    "static/media/knight-black.svg": "/chess-game/static/media/knight-black.381b4794f37f1f8fa80a.svg",
+    "static/media/pawn-white.svg": "/chess-game/static/media/pawn-white.6d543247d707d099aaab.svg",
+    "static/media/pawn-black.svg": "/chess-game/static/media/pawn-black.3dbd4867adfbc85f2b15.svg",
+    "static/media/rook-white.svg": "/chess-game/static/media/rook-white.b20b886c246185d36549.svg",
+    "static/media/rook-black.svg": "/chess-game/static/media/rook-black.260ede8e2b6ca9c75957.svg",
+    "index.html": "/chess-game/index.html",
+    "main.93f94f53.css.map": "/chess-game/static/css/main.93f94f53.css.map",
+    "main.21f79849.js.map": "/chess-game/static/js/main.21f79849.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.93f94f53.css",
+    "static/js/main.21f79849.js"
+  ]
+}
