@@ -4,8 +4,77 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+@media (max-width: 600px) {
+  .container-lett {
+    margin: 100px auto;
+  }
+
+  .block-numbers {
+    height: 80vw;
+    width: 5vw;
+  }
+
+  .block-letters {
+    display: flex;
+    width: 80vw;
+    height: 5vw;
+  }
+
+  .board-letter {
+    width: 10vw;
+  }
+
+  .board-number {
+    height: 10vw;
+  }
+
+  .board {
+    width: 80vw;
+    height: 80vw;
+  }
+
+  .cell {
+    width: 10vw;
+    height: 10vw;
+  }
+}
+
+@media (min-width: 601px) {
+  .container-lett {
+    margin: 10px auto;
+  }
+
+  .block-numbers {
+    height: 80vh;
+    width: 5vh;
+  }
+
+  .block-letters {
+    display: flex;
+    width: 80vh;
+    height: 5vh;
+  }
+
+  .board-letter {
+    width: 10vh;
+  }
+
+  .board-number {
+    height: 10vh;
+  }
+
+  .board {
+    width: 80vh;
+    height: 80vh;
+  }
+
+  .cell {
+    width: 10vh;
+    height: 10vh;
+  }
+}
+
 .container-lett {
-  margin: 10px auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -17,27 +86,21 @@ body {
 }
 
 .block-numbers {
-  height: 80vh;
-  width: 5vh;
   display: flex;
   flex-direction: column-reverse;
 }
 
 .block-letters {
   display: flex;
-  width: 80vh;
-  height: 5vh;
 }
 
 .board-letter {
-  width: 10vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .board-number {
-  height: 10vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -50,16 +113,12 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   flex-direction: column-reverse;
-  width: 80vh;
-  height: 80vh;
   border: 1px solid gray;
   box-shadow: 10px 10px 50px 0px #484449;
 }
 
 .cell {
   position: relative;
-  width: 10vh;
-  height: 10vh;
   box-sizing: border-box;
   border: 1px solid gray;
 
@@ -149,14 +208,16 @@ body {
 
 
 .info-container {
+  margin: 20px auto;
   display: flex;
+  width: 100%;
+  max-width: 80vh;
   gap: 20px;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .count-of-moves {
-  position: absolute;
-  top: 10px;
-  left: 10px;
   height: 30px;
   width: 150px;
   border-radius: 5px;
@@ -189,14 +250,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
 
 .modal-container {
   position: absolute;
   background-color: #cec778;
   height: 50px;
-  width: 60vh;
+  width: 60%;
   border-radius: 20px;
   display: flex;
   align-items: center;

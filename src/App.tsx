@@ -182,84 +182,91 @@ export const App = () => {
   };
 
   return (
-    <div className="container-lett">
-      {/* to delete !!!*/}
+    <>
       <div className="info-container">
-        {!gameWhithAI && (
-          <div className="count-of-moves">{`Next move of ${nextMoveOf}`}</div>
-        )}
         <button
           className="AI-button"
           onClick={() => setGameWhithAI((prev) => !prev)}
         >
           {gameWhithAI ? "Play 1 vs 1" : "Play whit AI"}
         </button>
+        {!gameWhithAI && (
+          <div className="count-of-moves">{`Next move of ${nextMoveOf}`}</div>
+        )}
       </div>
-      {messageCheck && (
-        <>
-          <div className="modal-window"></div>
-          <div className="modal-container">{messageCheck}</div>
-        </>
-      )}
-      {messageCheckMate && (
-        <>
-          <div className="modal-window"></div>
-          <div className="modal-container">{messageCheckMate}</div>
-        </>
-      )}
-      <div className="block-letters">
-        {blockLetters.map((ch) => (
-          <div key={ch} className="board-letter">
-            {ch}
-          </div>
-        ))}
-      </div>
-      <div className="container-nums">
-        <div className="block-numbers">
-          {blockNumbers.map((num) => (
-            <div key={num} className="board-number">
-              {num}
-            </div>
-          ))}
-        </div>
-        <div className="board">
-          {chessBoard.map((cell) => {
-            const { name, color, figureInside, possibleMove, selectedFigure } =
-              cell;
+      <div className="container-lett">
 
-            return (
-              <div
-                onClick={() => handleClickOnCell(cell)}
-                key={name}
-                className={classNames(
-                  `${name} cell cell--${color} figure ${
-                    figureInside ? "figure-" + figureInside : ""
-                  } ${possibleMove ? "possible-move" : ""} ${
-                    selectedFigure ? "selected-figure" : ""
-                  }`,
-                  {
-                    "possible-move": possibleMove,
-                  }
-                )}
-              ></div>
-            );
-          })}
+        {messageCheck && !messageCheckMate && (
+          <>
+            <div className="modal-window"></div>
+            <div className="modal-container">{messageCheck}</div>
+          </>
+        )}
+        {messageCheckMate && (
+          <>
+            <div className="modal-window"></div>
+            <div className="modal-container">{messageCheckMate}</div>
+          </>
+        )}
+        <div className="block-letters">
+          {blockLetters.map((ch) => (
+            <div key={ch} className="board-letter">
+              {ch}
+            </div>
+          ))}
         </div>
-        <div className="block-numbers">
-          {blockNumbers.map((num) => (
-            <div key={num} className="board-number">
-              {num}
+        <div className="container-nums">
+          <div className="block-numbers">
+            {blockNumbers.map((num) => (
+              <div key={num} className="board-number">
+                {num}
+              </div>
+            ))}
+          </div>
+          <div className="board">
+            {chessBoard.map((cell) => {
+              const {
+                name,
+                color,
+                figureInside,
+                possibleMove,
+                selectedFigure,
+              } = cell;
+
+              return (
+                <div
+                  onClick={() => handleClickOnCell(cell)}
+                  key={name}
+                  className={classNames(
+                    `${name} cell cell--${color} figure ${
+                      figureInside ? "figure-" + figureInside : ""
+                    } ${possibleMove ? "possible-move" : ""} ${
+                      selectedFigure ? "selected-figure" : ""
+                    }`,
+                    {
+                      "possible-move": possibleMove,
+                    }
+                  )}
+                ></div>
+              );
+            })}
+          </div>
+          <div className="block-numbers">
+            {blockNumbers.map((num) => (
+              <div key={num} className="board-number">
+                {num}
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="block-letters">
+          {blockLetters.map((ch) => (
+            <div key={ch} className="board-letter">
+              {ch}
             </div>
           ))}
         </div>
       </div>
-      <div className="block-letters">
-        {blockLetters.map((ch) => (
-          <div key={ch} className="board-letter">
-            {ch}
-          </div>
-        ))}
-      </div>
-    </div>
+    </>
   );
 };
